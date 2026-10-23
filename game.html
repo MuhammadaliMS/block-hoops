@@ -255,6 +255,8 @@ body.touch #act{display:block}
 .tag3d{position:fixed;pointer-events:none;font:700 10px var(--pixel);letter-spacing:.08em;color:var(--chalk);background:var(--ink);padding:3px 7px;border-radius:999px;transform:translate(-50%,-100%);white-space:nowrap;opacity:.9}
 .tag3d.p2{background:var(--red)}
 .tag3d.p1{background:var(--teal)}
+#card .hub{display:inline-block;margin:0 0 12px;font:700 11px var(--pixel);letter-spacing:.1em;color:var(--teal);text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:2px}
+#card .hub:hover{color:var(--red)}
 </style>
 
 <canvas id="c" tabindex="0" aria-label="Streetball court diorama"></canvas>
@@ -1314,6 +1316,7 @@ function recLine() { const r = loadRec()[locId]; return r ? `Won ${r.w} · Lost 
 function showIntro() {
   setState('intro'); updNext();
   $('card').innerHTML = `
+    <a class="hub" href="https://muhammadalims.github.io/">← ALL STREET GAMES</a>
     <h2>BLOCK <span>HOOPS</span></h2>
     <p class="lede">1v1 streetball. First to 11, 1s and 2s. Pick a court, then a game.</p>
     <h3>WHERE</h3>
